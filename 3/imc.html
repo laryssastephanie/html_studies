@@ -1,0 +1,82 @@
+<meta charset = "UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+	document.write("<br>");
+	document.write("<br>");
+
+}
+
+function mostra(frase) {
+
+	document.write(frase);
+	pulaLinha();
+	document.write("<hr>");
+
+}
+
+var pesoFlavio = 73;
+var alturaFlavio = 1.71;
+var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
+
+mostra("O imc do Flávio é " + imcFlavio);
+
+var pesoAmigo = 68;
+var alturaAmigo = 1.72;
+var imcAmigo = pesoAmigo / (alturaAmigo * alturaAmigo);
+
+mostra("O imc do meu amigo é " + imcAmigo);
+
+//Repetimos a fórmula do IMC 2x. Tem como facilitar isso?
+
+//criar uma função que calcule o IMC:
+
+function calculaImc(altura, peso) {
+
+	var imc = peso / (altura * altura);
+	mostra("O imc calculado é " + imc);
+
+}
+
+var pesoFlavio = 73;
+var alturaFlavio = 1.71;
+calculaImc(alturaFlavio, pesoFlavio);
+
+var pesoAmigo = 68;
+var alturaAmigo = 1.72;
+calculaImc(1.72, 68);
+
+//somar os dois IMC's?
+
+function calculaImc2(altura, peso) {
+
+	var imc = peso / (altura * altura);
+	return imc; //return = me retorna o valor que eu quero que seja exibido.
+
+}
+
+//outra forma de escrever a mesma função:
+
+//		function calculaImc2(altura, peso) {
+
+//			return peso / (altura * altura);
+
+//		}  Vai devolver o resultado da fórmula.
+
+var imcFlavio = calculaImc2(1.71, 73);
+var imcAmigo = calculaImc2(1.72, 68);
+
+var totalImc = imcFlavio + imcAmigo
+
+//ou
+
+var totalImc = calculaImc2(1.71, 73) + calculaImc2(1.72, 68);
+
+mostra(imcFlavio);
+mostra(imcAmigo);
+
+mostra("A soma dos imc's é " + totalImc);
+
+</script>

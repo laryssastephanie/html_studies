@@ -1,0 +1,33 @@
+<meta charset = "UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+	document.write("<br>");
+	document.write("<br>");
+}
+
+function mostra(frase) {
+
+	document.write(frase);
+	pulaLinha();
+	document.write("<hr>");
+}
+
+
+var limite = parseInt(prompt("Entre com a data limite"));
+
+var anoCopa = 1930;
+
+//repetir a cada 4 anos enquanto for menor que 2016 (true).
+
+while(anoCopa <= limite) {
+
+	mostra("Teve copa em " + anoCopa);
+	anoCopa = anoCopa + 4;
+} 
+
+mostra("FIM");
+
+</script>
